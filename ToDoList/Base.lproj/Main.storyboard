@@ -26,10 +26,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1E-Ab-bmi">
-                                            <rect key="frame" x="328" y="11" width="39" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="346" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.89921450614929199" green="0.89918756484985352" blue="0.89920276403427124" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.22059373560000001" green="0.0" blue="0.69047772880000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -44,11 +45,13 @@
                             <outlet property="delegate" destination="ih6-NC-fMa" id="Rf1-KL-NoM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="geA-er-2dA"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="geA-er-2dA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="JJb-Xq-1cx"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rv2-u4-UHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="129"/>
+            <point key="canvasLocation" x="61.600000000000001" y="128.18590704647679"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a83-QT-w2J">

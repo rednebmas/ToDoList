@@ -10,9 +10,12 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
+    var todoItems = ["Groceries", "Go to the bank", "Do my iOS homework"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "INFO 449 Todo List"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,16 +37,15 @@ class TodoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return 1
+        return self.todoItems.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
         let cell: TodoTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath) as! TodoTableViewCell
 
         // Configure the cell...
-        // cell.textLabel?.text = "My first task"
-        cell.aLabel.text = "
+        let rowIndex = indexPath.row
+        cell.aLabel.text = self.todoItems[rowIndex]
 
         return cell
     }
