@@ -49,6 +49,15 @@ class TodoTableViewController: UITableViewController {
 
         return cell
     }
+    
+    
+    @IBAction func addTaskButtonPressed(_ sender: Any) {
+        print("got here")
+
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "AddTaskViewController")
+        self.navigationController?.present(vc, animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,5 +103,6 @@ class TodoTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
