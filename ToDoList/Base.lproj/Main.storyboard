@@ -107,6 +107,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.44705882349999998" green="0.63529411759999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="0sO-xE-2RS" id="Ghw-IB-u1Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09g-oj-hIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

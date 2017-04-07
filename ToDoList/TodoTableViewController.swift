@@ -18,9 +18,11 @@ class TodoTableViewController: UITableViewController {
         self.navigationItem.title = "INFO 449 Todo List"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +57,9 @@ class TodoTableViewController: UITableViewController {
         print("got here")
 
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "AddTaskViewController")
+        let vc: AddTaskViewController = sb.instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
+        vc.todoItems = self.todoItems
+        vc.todoTableViewController = self
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
 
