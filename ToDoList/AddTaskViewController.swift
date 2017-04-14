@@ -12,8 +12,10 @@ class AddTaskViewController: UIViewController {
     
     var todoItems: [Task]?
     var todoTableViewController: TodoTableViewController?
+    
     @IBOutlet weak var titleTextField: UITextField!
-
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +30,7 @@ class AddTaskViewController: UIViewController {
     @IBAction func addTaskButtonPressed(_ sender: Any) {
         if self.todoTableViewController != nil {
             todoTableViewController!.todoItems.append(
-                Task(title:self.titleTextField.text!, due: Date())
+                Task(title:self.titleTextField.text!, due: self.datePicker.date)
             )
         }
         self.dismiss(animated: true, completion: nil)

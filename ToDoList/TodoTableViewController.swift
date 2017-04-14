@@ -50,8 +50,13 @@ class TodoTableViewController: UITableViewController {
         let cell: TodoTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath) as! TodoTableViewCell
 
         // Configure the cell...
-        let rowIndex = indexPath.row
-        cell.aLabel.text = self.todoItems[rowIndex].title
+        let task = self.todoItems[indexPath.row]
+        
+        cell.aLabel.text = task.title
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d/yy"
+        cell.dateLabel.text = formatter.string(from: task.due)
 
         return cell
     }

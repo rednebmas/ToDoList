@@ -11,6 +11,8 @@ import UIKit
 class TodoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var aLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
