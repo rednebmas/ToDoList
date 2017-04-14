@@ -16,6 +16,7 @@
 		2249C2271E8B435700340334 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2249C2261E8B435700340334 /* TodoTableViewController.swift */; };
 		2249C2291E8B4D5500340334 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2249C2281E8B4D5500340334 /* TodoTableViewCell.swift */; };
 		224C33FD1E8DE43200E5FAF4 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C33FC1E8DE43200E5FAF4 /* AddTaskViewController.swift */; };
+		22B7F8D71EA0463E0062E9C1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B7F8D61EA0463E0062E9C1 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2249C2261E8B435700340334 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		2249C2281E8B4D5500340334 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		224C33FC1E8DE43200E5FAF4 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		22B7F8D61EA0463E0062E9C1 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2249C2261E8B435700340334 /* TodoTableViewController.swift */,
 				2249C2281E8B4D5500340334 /* TodoTableViewCell.swift */,
 				224C33FC1E8DE43200E5FAF4 /* AddTaskViewController.swift */,
+				22B7F8D61EA0463E0062E9C1 /* Task.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B7F8D71EA0463E0062E9C1 /* Task.swift in Sources */,
 				2249C2291E8B4D5500340334 /* TodoTableViewCell.swift in Sources */,
 				224C33FD1E8DE43200E5FAF4 /* AddTaskViewController.swift in Sources */,
 				2249C1BF1E8B3C1600340334 /* AppDelegate.swift in Sources */,

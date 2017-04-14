@@ -10,7 +10,11 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
-    var todoItems = ["Groceries", "Go to the bank", "Do my iOS homework"]
+    var todoItems = [
+        Task(title: "DomainModel Homework", due: Date()),
+        Task(title: "Work on capstone", due: Date()),
+        Task(title: "Grade simplecalc", due: Date())
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +51,7 @@ class TodoTableViewController: UITableViewController {
 
         // Configure the cell...
         let rowIndex = indexPath.row
-        cell.aLabel.text = self.todoItems[rowIndex]
+        cell.aLabel.text = self.todoItems[rowIndex].title
 
         return cell
     }
@@ -61,6 +65,22 @@ class TodoTableViewController: UITableViewController {
         vc.todoItems = self.todoItems
         vc.todoTableViewController = self
         self.navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+    // MARK: - Swipe to delete
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            self.tableView.beginUpdates()
+            self.todoItems.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.tableView.endUpdates()
+        }
     }
 
     /*

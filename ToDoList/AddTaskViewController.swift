@@ -10,7 +10,7 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
     
-    var todoItems: [String]?
+    var todoItems: [Task]?
     var todoTableViewController: TodoTableViewController?
     @IBOutlet weak var titleTextField: UITextField!
 
@@ -27,7 +27,9 @@ class AddTaskViewController: UIViewController {
     
     @IBAction func addTaskButtonPressed(_ sender: Any) {
         if self.todoTableViewController != nil {
-            todoTableViewController!.todoItems.append(self.titleTextField.text!)
+            todoTableViewController!.todoItems.append(
+                Task(title:self.titleTextField.text!, due: Date())
+            )
         }
         self.dismiss(animated: true, completion: nil)
     }
