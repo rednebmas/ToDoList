@@ -16,12 +16,13 @@ class TodoTableViewController: UITableViewController {
         Task(title: "Grade simplecalc", due: Date())
     ]
     
+    var tasks: Tasks = Tasks()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.title = "INFO 449 Todo List"
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.tasks.loadFromDB()
+        self.todoItems = self.tasks.items
     }
     
     override func viewWillAppear(_ animated: Bool) {
