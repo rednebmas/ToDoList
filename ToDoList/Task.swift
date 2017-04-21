@@ -16,4 +16,13 @@ class Task: NSObject {
         self.title = title
         self.due = due
     }
+    
+    func insertIntoDB() {
+        let db = ManageDatabase.getDB()
+        do {
+            try db!.run("INSERT INTO Tasks (title, dueDate) VALUES ('\(self.title)', '\(self.due)')")
+        } catch {
+            print("exception inserting task")
+        }
+    }
 }

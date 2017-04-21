@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-ToDoList.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ToDoListTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ToDoListUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SQLite.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>31168A962C707292CEDFA2AB17467A42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>716446FB781DE153CA4890BD326348BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71B5B8D88DC3503827D88449CE7E0D91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAF3F5CD7E9D83556F94E81DB34E0F9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

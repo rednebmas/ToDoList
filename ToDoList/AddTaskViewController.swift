@@ -29,9 +29,9 @@ class AddTaskViewController: UIViewController {
     
     @IBAction func addTaskButtonPressed(_ sender: Any) {
         if self.todoTableViewController != nil {
-            todoTableViewController!.todoItems.append(
-                Task(title:self.titleTextField.text!, due: self.datePicker.date)
-            )
+            let task = Task(title:self.titleTextField.text!, due: self.datePicker.date)
+            task.insertIntoDB()
+            todoTableViewController!.todoItems.append(task)
         }
         self.dismiss(animated: true, completion: nil)
     }
