@@ -19,13 +19,17 @@ class Tasks: NSObject {
         let db = ManageDatabase.getDB()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         do {
             for row in try db!.prepare("SELECT title, dueDate FROM Tasks") {
                 let title: String = row[0]! as! String
                 let dateString: String = row[1]! as! String
                 let date = dateFormatter.date(from: dateString)
-                self.items.append(Task(title: title, due: Date()))
+                if (date != nil) {
+                    self.items.append(Task(title: title, due: date!))
+                } else {
+                    print("date was nil")
+                }
             }
         } catch {
             print("error retrieving tasks")

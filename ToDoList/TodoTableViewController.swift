@@ -64,8 +64,6 @@ class TodoTableViewController: UITableViewController {
     
     
     @IBAction func addTaskButtonPressed(_ sender: Any) {
-        print("got here")
-
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc: AddTaskViewController = sb.instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
         vc.todoItems = self.todoItems
