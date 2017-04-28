@@ -52,7 +52,7 @@ class TodoTableViewController: UITableViewController {
 
         // Configure the cell...
         let task = self.todoItems[indexPath.row]
-        
+        cell.tag = indexPath.row
         cell.aLabel.text = task.title
         
         let formatter = DateFormatter()
@@ -122,15 +122,17 @@ class TodoTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "PushTaskDetail" {
+            let cell = sender as! UIView
+            let task = self.todoItems[cell.tag]
+            
+            let vc = segue.destination as! TaskDetailViewController
+            vc.task = task
+        }
     }
-    */
-
 
 }

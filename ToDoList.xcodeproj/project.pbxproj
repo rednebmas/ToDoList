@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2231E8B71EB2BE7F0053EAB2 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231E8B61EB2BE7F0053EAB2 /* TaskDetailViewController.swift */; };
 		2249C1BF1E8B3C1600340334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2249C1BE1E8B3C1600340334 /* AppDelegate.swift */; };
 		2249C1C41E8B3C1600340334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2249C1C21E8B3C1600340334 /* Main.storyboard */; };
 		2249C1C61E8B3C1600340334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2249C1C51E8B3C1600340334 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1DD649C9E9708E0125E5082A /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
+		2231E8B61EB2BE7F0053EAB2 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		2249C1BB1E8B3C1600340334 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2249C1BE1E8B3C1600340334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2249C1C31E8B3C1600340334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				22B7F8D61EA0463E0062E9C1 /* Task.swift */,
 				226F95721EA97DF3006CB957 /* ManageDatabase.swift */,
 				226F95741EA9849E006CB957 /* Tasks.swift */,
+				2231E8B61EB2BE7F0053EAB2 /* TaskDetailViewController.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				224C33FD1E8DE43200E5FAF4 /* AddTaskViewController.swift in Sources */,
 				226F95731EA97DF3006CB957 /* ManageDatabase.swift in Sources */,
 				2249C1BF1E8B3C1600340334 /* AppDelegate.swift in Sources */,
+				2231E8B71EB2BE7F0053EAB2 /* TaskDetailViewController.swift in Sources */,
 				2249C2271E8B435700340334 /* TodoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

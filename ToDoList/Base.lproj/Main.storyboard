@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fjA-NX-yys" id="mve-rm-1pF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1E-Ab-bmi">
@@ -44,6 +44,7 @@
                                 <connections>
                                     <outlet property="aLabel" destination="b1E-Ab-bmi" id="aKW-Z7-3FS"/>
                                     <outlet property="dateLabel" destination="vrg-Fg-dqb" id="SNz-ox-1KQ"/>
+                                    <segue destination="eON-Ue-dTh" kind="show" identifier="PushTaskDetail" id="LHx-HJ-9io"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,6 +64,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rv2-u4-UHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61.600000000000001" y="128.18590704647679"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="bdC-Xo-BJ1">
+            <objects>
+                <viewController id="eON-Ue-dTh" customClass="TaskDetailViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qju-2X-IlE"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcF-Hj-Ab9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A0n-Lh-Gzy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U2W-oV-sYN">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74117647060000003" green="0.2470588235" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="taskTitleTextField" destination="U2W-oV-sYN" id="gs1-Tq-oxo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hju-OM-hkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="127.28635682158921"/>
         </scene>
         <!--Add Task View Controller-->
         <scene sceneID="P7D-zG-Xlb">
@@ -128,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09g-oj-hIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053.5999999999999" y="127.28635682158921"/>
+            <point key="canvasLocation" x="62" y="-642"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a83-QT-w2J">
