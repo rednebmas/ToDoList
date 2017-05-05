@@ -23,6 +23,9 @@ class TodoTableViewController: UITableViewController {
         self.navigationItem.title = "INFO 449 Todo List"
         self.tasks.loadFromDB()
         self.todoItems = self.tasks.items
+        
+        self.tableView.tableFooterView = UIView()
+        self.tableView.tableFooterView?.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,11 +130,13 @@ class TodoTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PushTaskDetail" {
-            let cell = sender as! UIView
-            let task = self.todoItems[cell.tag]
-            
-            let vc = segue.destination as! TaskDetailViewController
-            vc.task = task
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tableView.indexPath(for: cell)
+            if (indexPath != nil) {
+                let task = self.todoItems[indexPath!.row]
+                let vc = segue.destination as! TaskDetailViewController
+                vc.task = task
+            }
         }
     }
 

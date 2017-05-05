@@ -9,12 +9,19 @@
 import UIKit
 
 class Task: NSObject {
-    let title: String
+    var title: String
     let due: Date
+    var id: Int64?
     
     init(title: String, due: Date) {
         self.title = title
         self.due = due
+    }
+    
+    init(title: String, due: Date, id: Int64) {
+        self.title = title
+        self.due = due
+        self.id = id
     }
     
     func insertIntoDB() {
@@ -25,4 +32,15 @@ class Task: NSObject {
             print("exception inserting task")
         }
     }
+    
+    func save() {
+        let db = ManageDatabase.getDB()
+        do {
+            let stmt = "UPDATE Tasks SET title = '\(self.title)', dueDate = '\(self.due)' WHERE id = \(self.id!)"
+            try db!.run(stmt)
+        } catch {
+            print("exception inserting task")
+        }
+    }
+    
 }

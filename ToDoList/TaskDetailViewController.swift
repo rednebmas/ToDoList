@@ -23,8 +23,16 @@ class TaskDetailViewController: UIViewController {
         self.taskTitleTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if (self.task != nil) {
+            self.task!.save()
+        }
+    }
+    
     func textFieldDidChange(textField: UITextField) {
-        
+        if textField.text != nil && self.task != nil {
+            self.task!.title = textField.text!
+        }
     }
 
     override func didReceiveMemoryWarning() {
